@@ -20,7 +20,7 @@ text = data.decode('utf-8') #
 """
 
 #filename = write_file.replace("GeneralConcatenator-", "_")
-filename = "GA.csv"
+filename = "GA_new.csv"
 csv_file =  open(f'{filename}', mode='w')
 fieldnames = ['locality_name', 'precinct_id', 'vote_type',
               'bidenj', 'trumpd', 'jorgensenj', 'blankenshipd',
@@ -36,7 +36,7 @@ hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML,
        'Accept-Encoding': 'none',
        'Accept-Language': 'en-US,en;q=0.8',
        'Connection': 'keep-alive'}
-with open(f'input.txt') as f:
+with open(f'inputGA.txt') as f:
     for url in f:
         url=url.rstrip("\r\n")
         if url.startswith('#'):
